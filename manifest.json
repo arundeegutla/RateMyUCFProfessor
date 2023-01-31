@@ -1,0 +1,37 @@
+{
+    "name": "Unfinished",
+    "version": "0.1.0",
+    "description": "Quickly see the professor's ratings",
+    "permissions": ["storage", "tabs"],
+    "host_permissions": ["https://my.ucf.edu/*"],
+    "background": {
+      "service_worker": "background.js"
+    },
+    "content_scripts": [
+      {
+        "matches": ["*://my.ucf.edu/*"],
+        "js": ["contentScript.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "assets/bookmark.png",
+          "assets/play.png",
+          "assets/delete.png",
+          "assets/save.png"
+        ],
+        "matches": ["https://my.ucf.edu/*"]
+      }
+    ],
+    "action": {
+      "default_icon": {
+        "16": "assets/ext-icon.png",
+        "24": "assets/ext-icon.png",
+        "32": "assets/ext-icon.png"
+      },
+      "default_title": "Unfinished",
+      "default_popup": "popup.html"
+    },
+    "manifest_version": 3
+}
