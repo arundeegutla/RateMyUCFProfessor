@@ -1,10 +1,25 @@
-<link href="popup.css" rel="stylesheet" type="text/css" />
-<script type="module" src="popup.js"></script>
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="popup.css" rel="stylesheet" type="text/css" />
+  <script src="popup.js"></script>
+  <script src="jquery.min.js" type="text/javascript"></script>
+</head>
+<body>
 
-<div class="container">
-  <div>
-    <div class="title">Your bookmarks for this video</div>
+	<div class="nav">
+		<div class="nav-container">
+			<div class="info" id="info">
+				<h2>No Professor Found</h2>
+			</div>
+			<div id="nav-right">
+				<img class="refresh-button" src="assets/refresh.webp" id="getNames">
+				<div class="loader" id="loader"></div>
+			</div>
+		</div>
+	</div>
 
-    <div class="bookmarks" id="bookmarks"></div>
-  </div>
-</div>
+    <div class="container" id="container">
+    </div>
+</body>
+</html>

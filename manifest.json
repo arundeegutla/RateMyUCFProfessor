@@ -1,37 +1,38 @@
 {
-    "name": "Unfinished",
-    "version": "0.1.0",
-    "description": "Quickly see the professor's ratings",
-    "permissions": ["storage", "tabs"],
-    "host_permissions": ["https://my.ucf.edu/*"],
-    "background": {
-      "service_worker": "background.js"
+  "name": "RateMyUCFProfessor",
+  "version": "0.0.1",
+  "description": "Quickly see the professor's ratings on the MyUCF search page",
+  "permissions": ["tabs"],
+  "host_permissions": ["https://my.ucf.edu/*", "https://www.ratemyprofessors.com/*"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "icons": {
+    "16": "assets/ucf.png",
+    "128": "assets/ucf.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://my.ucf.edu/*"],
+      "js": ["contentScript.js", "jquery.min.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "assets/refresh.webp"
+      ],
+      "matches": ["https://my.ucf.edu/*"]
+    }
+  ],
+  "action": {
+    "default_icon": {
+      "16": "assets/ucf.png",
+      "24": "assets/ucf.png",
+      "32": "assets/ucf.png"
     },
-    "content_scripts": [
-      {
-        "matches": ["*://my.ucf.edu/*"],
-        "js": ["contentScript.js"]
-      }
-    ],
-    "web_accessible_resources": [
-      {
-        "resources": [
-          "assets/bookmark.png",
-          "assets/play.png",
-          "assets/delete.png",
-          "assets/save.png"
-        ],
-        "matches": ["https://my.ucf.edu/*"]
-      }
-    ],
-    "action": {
-      "default_icon": {
-        "16": "assets/ext-icon.png",
-        "24": "assets/ext-icon.png",
-        "32": "assets/ext-icon.png"
-      },
-      "default_title": "Unfinished",
-      "default_popup": "popup.html"
-    },
-    "manifest_version": 3
+    "default_title": "RateMyUCFProfessor",
+    "default_popup": "popup.html"
+  },
+  "manifest_version": 3
 }

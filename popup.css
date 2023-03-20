@@ -1,54 +1,174 @@
-.container {
-  width: 280px;
-  color: #314d3e;
-}
-
-.title {
-  font-size: 14px;
-  font-weight: bold;
-  padding: 8px;
-}
-
-.textbox {
-  width: 100%;
-  font-size: 12px;
+body {
+  background-color: black;
+  text-decoration: none !important;
+  align-items: center;
+  justify-content: center;
   margin: 0;
-  padding: 0px 2px;
+  color: black;
+  width: 400px;
+  /* min-height: 70px; */
+  padding-top: 75px; 
+
 }
 
-.textbox:focus {
-  outline: 0;
-  border-color: #66afe9;
-}
-
-.bookmarks {
-  margin: 5px 5px;
-  padding: 3px;
-}
-
-.bookmark {
+.nav {
+  color: white;
+  position: fixed;
   display: flex;
-  border-bottom-color: #00254d;
-  border-bottom-width: 1px;
-  border-bottom-style: solid;
-  border-radius: 0.8rem;
-  padding: 3px;
-  padding-bottom: 7px;
-  margin-bottom: 7px;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 400px;
+  height: 50px;
+  align-items: center;
+  padding: 10px;
+  top: 0;
+  left: 0;
+  float: left;
+  z-index: 1000;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.373);
+  backdrop-filter: blur(20px) !important;
 }
 
-.bookmark-title {
-  padding-left: 2px;
+.nav .nav-container{
+  color: white;
+  position: relative;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  min-width: 80%;
+  height: 50px;
+  align-items: center;
 }
 
-.bookmark-controls img {
-  margin: 0 4px;
-  width: 18px;
-  height: 18px;
+
+.nav .info h2{
+  color: white !important;
+}
+
+.nav .refresh-button{
+  width: 40px;
+  height: auto;
+  -webkit-filter: invert(100%);
+  filter: invert(100%);
+}
+
+.nav .refresh-button:hover{
   cursor: pointer;
+  filter: invert(100%) brightness(85%);
 }
 
-.bookmark-controls {
-  flex: auto;
-  text-align: right;
+.button {
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: auto;
+  width: 150px;
+}
+
+.container-rating {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: fit-content;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  width: fit-content;
+  align-items: flex-start;
+  justify-content: center;
+  margin: auto;
+}
+
+.professor {
+  width: 350px;
+  height: fit-content;
+  margin: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  padding: 15px;
+  align-items: center;
+  border-radius: 17px;
+  background: wheat;
+  transition: all 0.5s ease;
+}
+
+.professor:hover{
+  margin: 15px 5px;
+  cursor: pointer;
+  filter: brightness(105%);
+  /* --c1: 100%; */
+  /* background-image: linear-gradient(to left, red , yellow); */
+  /* background: rgba(255, 255, 255, 0.2); */
+  border-radius: 17px;
+}
+
+.professor .pName {
+  font-size: 15px;
+  text-decoration: none !important;
+}
+
+a, p, h2{
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+
+.professor .rating-box {
+  display: flex;
+  text-align: center;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+}
+.professor .rating-box p{
+  margin: auto;
+  color: black;
+  font-size: 30px;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+.professor-name {
+  margin-top: 20px;
+}
+
+.loader {
+  display: none;
+  border: 3px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 3px solid #3498db;
+  width: 10px;
+  height: 10px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+  flex-wrap: nowrap;
+  justify-content: center;
+  margin: auto;
+}
+
+/* Safari */
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
