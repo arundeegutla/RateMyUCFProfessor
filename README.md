@@ -3,7 +3,10 @@ Chrome Extension that gets UCF Professor rating from RateMyProfessor.com.
 
 Check out on chrome web store.
 
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/720px-Google_Chrome_icon_%28February_2022%29.svg.png"  width="200" height="200">
+[<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/Google_Chrome_icon_%28February_2022%29.svg/720px-Google_Chrome_icon_%28February_2022%29.svg.png"  width="100" height="100">](https://chrome.google.com/webstore/detail/ratemyucfprofessor/imlmfakdnakcelcmhkdmehdeljilhnok?utm_source=chrome-ntp-icon)
+
+
+
 
 <!-- (https://chrome.google.com/webstore/detail/ratemyucfprofessor/imlmfakdnakcelcmhkdmehdeljilhnok?utm_source=chrome-ntp-icon) -->
 
